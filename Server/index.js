@@ -35,17 +35,16 @@ mqtt.subscribe( async function(topic, message) {
     if(topic=="nguyenha25012002/feeds/temperature"){
       var temperature= message.toString();
       // Goi API toi server de luu lai nhiet do trong DB
-      await axios.post('https://smarthome-biiq.onrender.com/temperature', {
+      await axios.post('https://smart-home-react.onrender.com/temperature', {
           value: temperature,
       })
-      
-
+    
       io.emit('temperatureUpdate', temperature);
     }
     else if(topic=="nguyenha25012002/feeds/humidity"){
       var humidity= message.toString();
       // Gọi API tới server để lưu lại độ ẩm trong DB
-      await axios.post('http://localhost:3000/humidity', {
+      await axios.post('https://smart-home-react.onrender.com/humidity', {
           value: humidity,
       })
       io.emit('humidityUpdate', humidity);
