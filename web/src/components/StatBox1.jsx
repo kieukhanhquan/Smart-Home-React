@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box, Switch, Typography, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import Slider from '@mui/material/Slider';
-
+import axios from 'axios';
 const StatBox = ({ title, subtitle, icon, progress, increase }) => {
   const [checked, setChecked] = useState(false);
   const theme = useTheme();
