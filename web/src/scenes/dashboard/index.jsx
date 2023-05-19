@@ -232,14 +232,14 @@ const Dashboard = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                Total Spend
+                Temperture
               </Typography>
               <Typography
                 variant="h3"
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
               >
-                35,02KWh
+                For a Week
               </Typography>
             </Box>
             <Box>

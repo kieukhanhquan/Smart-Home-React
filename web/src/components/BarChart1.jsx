@@ -21,7 +21,7 @@ const BarChart1 = () => {
       });
   const fetchHumidities = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/humidity/perday');
+      const response = await axios.get('https://smart-home-react.onrender.com/humidity/perday');
       const humidities = response.data;
       setHumidities(humidities);
       // Xử lý dữ liệu nhiệt độ tại đây
