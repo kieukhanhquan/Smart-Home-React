@@ -1,9 +1,10 @@
 {
   "expo": {
-    "name": "RunApp",
-    "slug": "RunApp",
+    "name": "Smart Home",
+    "slug": "smart-home",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "assetBundlePatterns": [
       "**/*"
@@ -13,9 +14,13 @@
       "bundleIdentifier": "home"
     },
     "android": {
+      "package": "smarthome.home",
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {},
     "plugins": [
@@ -26,6 +31,11 @@
           "speechRecognitionPermission": "Allow Voice to Text Tutorial to securely recognize user speech"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "fe216acb-04df-401a-8400-0fefd16ee647"
+      }
+    }
   }
 }
