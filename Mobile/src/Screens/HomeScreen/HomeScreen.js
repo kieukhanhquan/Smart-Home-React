@@ -42,6 +42,12 @@ const HomeScreen = ({ navigation }) => {
   useEffect(() => {
     var hours = String(new Date().getHours()); //Current Hours
     var min = String(new Date().getMinutes()); //Current Minutes
+    if (hours.length == 1) {
+      hours = "0" + hours;
+    }
+    if (min.length == 1) {
+      min = "0" + min;
+    }
     setCurrentTime(
       hours + ':' + min
     );
